@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-amm-red: #D92323;
+  --color-amm-red-dark: #B01B1B;
+  --color-amm-red-light: #E84545;
+  --color-amm-black: #0A0A0A;
+  --color-amm-black-soft: #141414;
+  --color-amm-black-card: #1A1A1A;
+  --color-amm-gray: #888888;
+  --color-amm-gray-dark: #333333;
+  --color-background: #0A0A0A;
+  --color-foreground: #ededed;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-slide-up: slide-up 0.8s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0A;
+  color: #ededed;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Premium industrial grid background */
+.industrial-grid {
+  background-image:
+    linear-gradient(rgba(217,35,35,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217,35,35,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Glass morphism card */
+.glass-dark {
+  background: rgba(26,26,26,0.85);
+  backdrop-filter: blur(16px);
+}
+
+/* Premium card hover 3D effect */
+.card-3d {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.card-3d:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(217,35,35,0.15), 0 0 0 1px rgba(217,35,35,0.1);
+}
+
+/* Section separator */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217,35,35,0.3), transparent);
+}
+
+/* Hide default cursor on desktop, use custom cursor */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
