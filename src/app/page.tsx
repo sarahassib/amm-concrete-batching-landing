@@ -5,12 +5,10 @@ import QualificationForm from "@/components/QualificationForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import CustomCursor from "@/components/CustomCursor";
 
 export default function Home() {
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main className="min-h-screen bg-amm-black">
         <Hero />
