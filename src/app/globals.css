@@ -68,7 +68,7 @@ body {
 
 /* Hide default cursor on desktop, use custom cursor */
 @media (pointer: fine) {
-  * {
+  html, body, a, button, input, textarea, select, div, span, p, h1, h2, h3, h4, h5, h6 {
     cursor: none !important;
   }
 }
