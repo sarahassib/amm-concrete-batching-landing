@@ -76,7 +76,7 @@ export default function AdminLogin() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="admin@amm-dz.com"
+                  placeholder="votre email"
                   className="w-full pl-11 pr-4 py-3 rounded-lg bg-amm-black border border-gray-700 text-white placeholder-gray-500 focus:border-amm-red focus:ring-1 focus:ring-amm-red outline-none transition-colors text-sm"
                 />
               </div>
@@ -125,11 +125,7 @@ export default function AdminLogin() {
             </button>
           </form>
 
-          {/* Hint */}
-          <p className="text-gray-600 text-xs text-center mt-6">
-            {/* PLACEHOLDER: Replace with real credentials in production */}
-            Identifiants par défaut : admin@amm-dz.com / amm-admin-2024
-          </p>
+
         </div>
       </motion.div>
     </div>

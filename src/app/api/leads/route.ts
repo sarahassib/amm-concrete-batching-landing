@@ -61,10 +61,15 @@ export async function POST(request: NextRequest) {
 
 /* =====================================================
    GET /api/leads
-   Returns all leads. In production, add auth check here.
+   Returns all leads. Requires valid admin_token cookie.
    ===================================================== */
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
+    const token = request.cookies.get("admin_token")?.value;
+    if (!token) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const supabase = getSupabase();
     const { data, error } = await supabase
       .from("leads")
